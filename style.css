@@ -1,0 +1,71 @@
+/* Cloudy gradient background */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background: linear-gradient(135deg, #7f7fd5, #86a8e7, #91eae4);
+    background-size: 400% 400%;
+    animation: gradientShift 20s ease infinite;
+    min-height: 100vh;
+}
+@keyframes gradientShift {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+.overlay {
+    background: rgba(0,0,0,0.38);
+    min-height: 100vh;
+    padding: 28px;
+    box-sizing: border-box;
+}
+
+header, footer {
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+h1 { margin: 0 0 8px; font-size: clamp(20px, 3.5vw, 34px); }
+.tagline { margin: 0; font-size: 1.05em; color: #e6f3ff; }
+
+.card {
+    background: rgba(255,255,255,0.06);
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 18px;
+    backdrop-filter: blur(6px);
+}
+
+#stations-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.station-item {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: 10px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.06);
+}
+
+.station-name { font-weight: 700; }
+.station-aqi {
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-weight: 800;
+    color: #fff;
+}
+
+.aqi-good { background: #4CAF50; }
+.aqi-moderate { background: #FF9800; }
+.aqi-unhealthy { background: #F44336; }
+
+/* responsive */
+@media (max-width:600px) {
+  .overlay { padding: 16px; }
+  h1 { font-size: 22px; }
+}

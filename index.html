@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Urban Health Coach</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="overlay">
+    <header>
+      <h1>Urban Health Coach (Food + Pollution)</h1>
+      <p class="tagline">Real-time AQI & Smart Tips for Your City</p>
+    </header>
+
+    <main>
+      <section class="card" id="current">
+  <h2>Your Location</h2>
+  <p id="location">Detecting...</p>
+
+  <!-- ✅ ADD THIS LINE BELOW -->
+  <p id="nearest-station">Your nearest AQI station is …</p>
+
+  <p id="aqi">Loading AQI...</p>
+  <p id="suggestion"></p>
+</section>
+
+
+      <section class="card" id="tips">
+        <h2>Daily Tip</h2>
+        <p id="tip">Fetching tip...</p>
+      </section>
+
+      <section class="card" id="top-stations">
+        <h2>Top 10 Most Polluted Stations Nearby</h2>
+        <div id="stations-list">Loading stations...</div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Data Source: <a href="https://aqicn.org/api/" target="_blank" rel="noopener">WAQI</a></p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
